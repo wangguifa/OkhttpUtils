@@ -37,7 +37,7 @@ public class GetBuilder extends BaseRequestBuilder<GetBuilder> implements IAddPa
     @Override
     public GetBuilder addParam(String key, Object val) {
         if (this.params == null) {
-            params = new LinkedHashMap<>();
+            this.params = new LinkedHashMap<>();
         }
         params.put(key, val);
         return this;
@@ -46,7 +46,7 @@ public class GetBuilder extends BaseRequestBuilder<GetBuilder> implements IAddPa
     @Override
     public GetBuilder addParams(Map<String, Object> params) {
         if (this.params == null) {
-            params = new LinkedHashMap<>();
+            this.params = new LinkedHashMap<>();
         }
         this.params.putAll(params);
         return this;
